@@ -24,10 +24,11 @@
     ],
     "web_accessible_resources": [
       {
-        "resources": ["models/model.onnx", "libs/onnx.min.js"],
+        "resources": ["models/model.onnx", "libs/onnx.min.js", "config.json"],
         "matches": ["*://*.ixl.com/*"]
       }
     ],
+    
     "options_page": "options.html",
     "icons": {
       "16": "icon16.png",
