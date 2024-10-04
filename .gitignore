@@ -29,6 +29,9 @@ key.pem
 *.map
 *.tmp
 
+# Ignore the exported ONNX model
+model.onnx
+
 # Cache and output
 .cache/
 .output/
