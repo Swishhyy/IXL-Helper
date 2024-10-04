@@ -41,3 +41,6 @@ key.pem
 
 # Ignore local Chrome storage (if applicable)
 chrome-profile/
+
+# Python virtual environment
+.venv/
