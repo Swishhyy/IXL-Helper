@@ -79,9 +79,49 @@ loadOnnxJS(() => {
       return correctIndex; // Return the index of the correct answer
     }
 
-    // Highlight the correct answer element on the webpage
-    function highlightCorrectAnswer(answerElement) {
+    // Highlight the correct answer element on the webpage and show a popup window with the answer
+    function highlightCorrectAnswer(answerElement, answerText) {
       answerElement.style.backgroundColor = highlightColor; // Set the background color of the correct answer element
+      showCustomModal(answerText); // Show a custom modal with the answer
+    }
+
+    // Create and display a custom modal with the correct answer
+    function showCustomModal(answerText) {
+      // Create the modal container
+      const modal = document.createElement('div');
+      modal.id = 'custom-answer-modal';
+      modal.style.position = 'fixed';
+      modal.style.top = '50%';
+      modal.style.left = '50%';
+      modal.style.transform = 'translate(-50%, -50%)';
+      modal.style.backgroundColor = '#fff';
+      modal.style.padding = '20px';
+      modal.style.borderRadius = '10px';
+      modal.style.boxShadow = '0 4px 8px rgba(0, 0, 0, 0.2)';
+      modal.style.zIndex = '1000';
+
+      // Create the modal content
+      const content = document.createElement('div');
+      content.textContent = `The correct answer is: ${answerText}`;
+      content.style.fontSize = '18px';
+      content.style.marginBottom = '20px';
+
+      // Create the close button
+      const closeButton = document.createElement('button');
+      closeButton.textContent = 'Close';
+      closeButton.style.padding = '10px 15px';
+      closeButton.style.fontSize = '16px';
+      closeButton.style.cursor = 'pointer';
+      closeButton.onclick = () => {
+        document.body.removeChild(modal); // Remove the modal from the DOM when closed
+      };
+
+      // Append content and close button to the modal
+      modal.appendChild(content);
+      modal.appendChild(closeButton);
+
+      // Append the modal to the document body
+      document.body.appendChild(modal);
     }
 
     // Main function to execute the process of extracting and answering questions
@@ -93,7 +133,7 @@ loadOnnxJS(() => {
       if (data) {
         let session = await loadModel(); // Load or retrieve the ONNX session
         let correctIndex = await getCorrectAnswer(session, data.question, data.answers); // Get the correct answer index
-        highlightCorrectAnswer(data.elements[correctIndex]); // Highlight the correct answer element
+        highlightCorrectAnswer(data.elements[correctIndex], data.answers[correctIndex]); // Highlight the correct answer element and show popup
       }
     }
 
