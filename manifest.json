@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "IXL Helper",
-  "version": "Alpha 0.1",
+  "version": "1.1",
   "description": "A Chrome extension to assist the user on IXL by providing the correct responses based on the questions.",
   "permissions": [
       "activeTab",
