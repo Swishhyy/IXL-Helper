@@ -11,7 +11,7 @@ input_text = "What is your name?"
 inputs = tokenizer(input_text, return_tensors="pt")
 dummy_input = (inputs["input_ids"], inputs["attention_mask"])
 
-# Export to ONNX
+# Export to ONNX with updated opset version
 torch.onnx.export(
     model,
     dummy_input,
@@ -19,5 +19,5 @@ torch.onnx.export(
     input_names=["input_ids", "attention_mask"],
     output_names=["output"],
     dynamic_axes={"input_ids": {0: "batch_size"}, "attention_mask": {0: "batch_size"}},
-    opset_version=11
+    opset_version=14  # Updated to version 14
 )
