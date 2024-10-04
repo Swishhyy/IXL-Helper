@@ -12,7 +12,8 @@ Language Arts is the first stage but math and other subjects will def come later
 ## Whats used in this 
 Python, JavaScript, HTML, Transformers (py library), Torch (py library)
 
-### File Path (what it should look like)
+## File Path (what it should look like) 
+### you might have to view this inside the read me file itself to view it
 /IXL Helper/
     ├── manifest.json
     ├── content.js
