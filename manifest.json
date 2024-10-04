@@ -1,45 +1,43 @@
 {
-    "manifest_version": 3,
-    "name": "IXL Helper",
-    "version": "1.1",
-    "description": "A Chrome extension to assist the user on IXL by providing the correct responses based on the questions.",
-    "permissions": [
+  "manifest_version": 3,
+  "name": "IXL Helper",
+  "version": "Alpha 0.1",
+  "description": "A Chrome extension to assist the user on IXL by providing the correct responses based on the questions.",
+  "permissions": [
       "activeTab",
       "scripting",
       "storage"
-    ],
-    "background": {
+  ],
+  "background": {
       "service_worker": "background.js"
-    },
-    "action": {
+  },
+  "action": {
       "default_popup": "popup.html",
-      "default_icon": "icon.png"
-    },
-    "content_scripts": [
+      "default_icon": "Icons/icon.png"
+  },
+  "content_scripts": [
       {
-        "matches": ["*://*.ixl.com/*"],
-        "js": ["content.js"],
-        "run_at": "document_idle"
+          "matches": ["*://*.ixl.com/*"],
+          "js": ["content.js"],
+          "run_at": "document_idle"
       }
-    ],
-    "web_accessible_resources": [
+  ],
+  "web_accessible_resources": [
       {
-        "resources": ["models/model.onnx", "libs/onnx.min.js", "config.json"],
-        "matches": ["*://*.ixl.com/*"]
+          "resources": ["models/model.onnx", "libs/onnx.min.js", "config.json"],
+          "matches": ["*://*.ixl.com/*"]
       }
-    ],
-    
-    "options_page": "options.html",
-    "icons": {
-      "16": "icon16.png",
-      "48": "icon48.png",
-      "128": "icon128.png"
-    },
-    "host_permissions": [
+  ],
+  "options_page": "options.html",
+  "icons": {
+      "16": "Icons/icon16.png",
+      "48": "Icons/icon48.png",
+      "128": "Icons/icon128.png"
+  },
+  "host_permissions": [
       "*://*.ixl.com/*"
-    ],
-    "content_security_policy": {
+  ],
+  "content_security_policy": {
       "extension_pages": "script-src 'self'; object-src 'self'"
-    }
   }
-  
+}

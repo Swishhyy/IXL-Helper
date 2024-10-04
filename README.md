@@ -18,18 +18,30 @@ Python, JavaScript, HTML, Transformers (py library), Torch (py library)
 ## File Path (what it should look like) 
 ### You might have to view this inside the readme.Md file itself to view it.
 
-/IXL Helper/
-    ├── manifest.json
-    ├── content.js
-    ├── background.js
-    ├── popup.html
-    ├── popup.js
-    ├── options.html
-    ├── options.js
-    ├── libs/
-    │     └── onnx.min.js
-    ├── models/
-    │     └── model.onnx
-    └── export_to_onnx.py
+IXL-HELPER/
+│
+├── .venv/                       # Virtual environment directory (you wont have this)
+│
+├── Icons/                       # Directory containing icon images
+│   ├── icon.png
+│   ├── icon16.png
+│   ├── icon48.png
+│   └── icon128.png
+│
+├── models/                      # Directory containing model files
+│   └── model.onnx
+│
+├── .gitignore                   # Git ignore file
+├── background.js                # Background script
+├── config.json                  # Configuration settings file
+├── content.js                   # Content script
+├── export_to_onnx.py            # Python script to export ONNX model
+├── manifest.json                # Chrome extension manifest file
+├── options.html                 # Options page HTML file
+├── options.js                   # Options page JavaScript file
+├── popup.html                   # Popup HTML file
+├── popup.js                     # Popup JavaScript file
+└── README.md                    # Readme file
+
 
 
