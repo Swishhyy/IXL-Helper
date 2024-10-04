@@ -1,4 +1,4 @@
-#Disclaimer
+# Disclaimer
 This is my first time making something like this (yes I am using AI mostly to mess around with the idea) but this is purely because I want to learn some stuff and this is just how I like to do it so yes it probably won't work that well but it's worth a shot.
 
 ## IXL-Helper
