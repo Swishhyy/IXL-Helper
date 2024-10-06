@@ -1,4 +1,6 @@
 # Disclaimer
+Im archiving it due to the whole language model implentation i tried, didnt work how i wanted it to so idrk how i should do this and i dont plan on contributing to it anymore but if anyone wants to see it ofc itll be archived.
+# Yapping
 This is my first time making something like this (yes I am using AI mostly to mess around with the idea) but this is purely because I want to learn some stuff and this is just how I like to do it so yes it probably won't work that well but it's worth a shot.
 
 ## IXL-Helper
